@@ -8,6 +8,8 @@ function init () {
   document.getElementById('score').innerHTML = 0;
   document.getElementById('single-jeopardy').style.display = 'block';
   document.getElementById('double-jeopardy').style.display = 'none';
+  document.getElementById('daily-double-input').style.display = 'none';
+  document.getElementById('toggleDouble').innerHTML = 'Double Jeopardy';
 }
 
 function addScore (points) {
@@ -28,6 +30,17 @@ function toggleDoubleJeopardy () {
     document.getElementById('single-jeopardy').style.display = 'block';
     document.getElementById('double-jeopardy').style.display = 'none';
     document.getElementById('toggleDouble').innerHTML = 'Double Jeopardy';
+  }
+}
+
+function toggleDailyDouble () {
+  var daily = document.getElementById('daily-double-input').style.display;
+  if (_toggleShow(daily)) {
+    document.getElementById('daily-double-input').style.display = 'none';
+  }
+
+  if (_toggleHide(daily)) {
+    document.getElementById('daily-double-input').style.display = 'block';
   }
 }
 

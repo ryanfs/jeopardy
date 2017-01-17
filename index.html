@@ -56,9 +56,17 @@
     </article>
   </section>
 
-  <section>
-    <button type="button" id="toggleDouble" onclick="toggleDoubleJeopardy()">Double Jeopardy</button>
+  <section id="daily-double-input">
+    <input type="num" name="daily" id="daily-bet">
+    <input type="submit" value="Correct!" onclick="addScore(parseInt(document.getElementById('daily-bet').value)); toggleDailyDouble()">
+    <input type="submit" value="Wrong!" onclick="addScore(parseInt(-document.getElementById('daily-bet').value)); toggleDailyDouble()">
   </section>
+
+  <footer>
+    <button onclick="toggleDailyDouble()">Daily Double</button>
+    <button type="button" id="toggleDouble" onclick="toggleDoubleJeopardy()">Double Jeopardy</button>
+     <button type="button" onclick="init()">Reset Game</button>
+  </footer>
 
 <!--
   <footer>

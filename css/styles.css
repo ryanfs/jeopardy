@@ -14,12 +14,14 @@ section.correct {
   background-color: green;
   width: 45%;
   display: inline-block;
+  padding: 5px;
 }
 
 section.wrong {
   background-color: #ca3232;
   width: 45%;
   display: inline-block;
+  padding: 5px;
 }
 
 section.buttons {
@@ -44,9 +46,40 @@ h1 {
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 1.2em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#daily-double-input {
+  margin: 10px;
+  width: 90%;
+}
+
+.dd-correct {
+  padding: 10px 40px;
+  background-color: green;
+  color: ivory;
+}
+
+.dd-wrong {
+  padding: 10px 40px;
+  background-color: #ca3232;
+  color: ivory;
+}
+
+.text-input {
+  border: 1px solid black;
+  padding: 10px 20px;
+  width: 75%;
+  margin: 10px;
 }
 
 footer {
   background-color: yellow;
+  position: absolute;
+  bottom: 20px;
+  width: 93%;
+  color: blue;
+  padding: 20px 0;
 }

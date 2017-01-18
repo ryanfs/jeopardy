@@ -10,6 +10,7 @@ function init () {
   document.getElementById('double-jeopardy').style.display = 'none';
   document.getElementById('daily-double-input').style.display = 'none';
   document.getElementById('toggleDouble').innerHTML = 'Double Jeopardy';
+  document.getElementById('footer').style.display = 'block';
 }
 
 function addScore (points) {
@@ -37,10 +38,12 @@ function toggleDailyDouble () {
   var daily = document.getElementById('daily-double-input').style.display;
   if (_toggleShow(daily)) {
     document.getElementById('daily-double-input').style.display = 'none';
+    document.getElementById('footer').style.display = 'block';
   }
 
   if (_toggleHide(daily)) {
     document.getElementById('daily-double-input').style.display = 'block';
+    document.getElementById('footer').style.display = 'none';
   }
 }
 

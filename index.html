@@ -58,37 +58,62 @@
         <input type="button" id="subtract1000" value="1000" onclick="addScore(-1000)" />
       </article>
     </section>
-
   </section>
 
-  <section id="double-jeopardy">
-    <article>
-      <h2>Correct!</h2>
-      <input type="button" id="add400" value="400" onclick="addScore(400)" />
-      <input type="button" id="add800" value="800" onclick="addScore(800)" />
-      <input type="button" id="add1200" value="1200" onclick="addScore(1200)" />
-      <input type="button" id="add1600" value="1600" onclick="addScore(1600)" />
-      <input type="button" id="add2000" value="2000" onclick="addScore(2000)" />
+  <section id="double-jeopardy" class="buttons">
+    <section class="correct">
+      <h2>Correct</h2>
+      <article>
+        <input type="button" id="add400" value="400" onclick="addScore(400)" />
+      </article>
+      <article>
+        <input type="button" id="add800" value="800" onclick="addScore(800)" />
+      </article>
+      <article>
+        <input type="button" id="add1200" value="1200" onclick="addScore(1200)" />
+      </article>
+      <article>
+        <input type="button" id="add1600" value="1600" onclick="addScore(1600)" />
+      </article>
+      <article>
+        <input type="button" id="add2000" value="2000" onclick="addScore(2000)" />
+      </article>
+    </section>
 
+    <section class="wrong">
       <h2>Wrong!</h2>
-      <input type="button" id="subtract400" value="400" onclick="addScore(-400)" />
-      <input type="button" id="subtract800" value="800" onclick="addScore(-800)" />
-      <input type="button" id="subtract1200" value="1200" onclick="addScore(-1200)" />
-      <input type="button" id="subtract1600" value="1600" onclick="addScore(-1600)" />
-      <input type="button" id="subtract2000" value="2000" onclick="addScore(-2000)" />
-    </article>
+      <article>
+        <input type="button" id="subtract400" value="400" onclick="addScore(-400)" />
+      </article>
+      <article>
+        <input type="button" id="subtract800" value="800" onclick="addScore(-800)" />
+      </article>
+      <article>
+        <input type="button" id="subtract1200" value="1200" onclick="addScore(-1200)" />
+      </article>
+      <article>
+        <input type="button" id="subtract1600" value="1600" onclick="addScore(-1600)" />
+      </article>
+      <article>
+        <input type="button" id="subtract2000" value="2000" onclick="addScore(-2000)" />
+      </article>
+    </section>
+  </section>
+
+  <section class="score">
+    <h2><button onclick="toggleDailyDouble()">Daily Double</button></h2>
   </section>
 
   <section id="daily-double-input">
-    <input type="num" name="daily" id="daily-bet">
-    <input type="submit" value="Correct!" onclick="addScore(parseInt(document.getElementById('daily-bet').value)); toggleDailyDouble()">
-    <input type="submit" value="Wrong!" onclick="addScore(parseInt(-document.getElementById('daily-bet').value)); toggleDailyDouble()">
+    <input class="text-input" type="num" name="daily" id="daily-bet">
+    <br />
+    <input type="submit" class="dd-correct" value="Correct!" onclick="addScore(parseInt(document.getElementById('daily-bet').value)); toggleDailyDouble()">
+    <input type="submit" value="Wrong!" class="dd-wrong" onclick="addScore(parseInt(-document.getElementById('daily-bet').value)); toggleDailyDouble()">
   </section>
 
-  <footer>
-    <button onclick="toggleDailyDouble()">Daily Double</button>
-    <button type="button" id="toggleDouble" onclick="toggleDoubleJeopardy()">Double Jeopardy</button>
-     <button type="button" onclick="init()">Reset Game</button>
+  <footer id="footer">
+    <h2 type="button" id="toggleDouble" onclick="toggleDoubleJeopardy()" style="float:left">Double Jeopardy</h2>
+    <h2 type="button" onclick="init()" style="float:right;">Reset Game</h2>
   </footer>
 
 <!--

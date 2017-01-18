@@ -105,7 +105,7 @@
   </section>
 
   <section id="daily-double-input">
-    <input class="text-input" type="num" name="daily" id="daily-bet">
+    <input class="text-input" type="number" name="daily" id="daily-bet">
     <br />
     <input type="submit" class="dd-correct" value="Correct!" onclick="addScore(parseInt(document.getElementById('daily-bet').value)); toggleDailyDouble()">
     <input type="submit" value="Wrong!" class="dd-wrong" onclick="addScore(parseInt(-document.getElementById('daily-bet').value)); toggleDailyDouble()">

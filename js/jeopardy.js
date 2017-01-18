@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(event) {
   init();
-  // getScore(points);
 });
 
 function init () {
-  window.value = 0;
-  document.getElementById('score').innerHTML = 0;
+  window.value = {score: 0};
+  window.value.history = [];
+  document.getElementById('score').innerHTML = '$0';
   document.getElementById('single-jeopardy').style.display = 'block';
   document.getElementById('double-jeopardy').style.display = 'none';
   document.getElementById('daily-double-input').style.display = 'none';
@@ -14,9 +14,15 @@ function init () {
 }
 
 function addScore (points) {
-  window.value += parseInt(points);
-  document.getElementById('score').innerHTML = window.value;
+  window.value.score += parseInt(points);
+  window.value.history.push(points);
+  console.log(window.value);
+  document.getElementById('score').innerHTML = '$' + window.value.score;
 }
+
+// function undo () {
+//   window.value.history
+// }
 
 function toggleDoubleJeopardy () {
   var single = document.getElementById('single-jeopardy').style.display;

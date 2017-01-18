@@ -5,7 +5,7 @@
     <title>Jeopardy!</title>
     <meta name="author" content="Ryan F. Salerno">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--     <meta name="robots" content="index, follow" />
     <meta name="google-site-verification" content="" />
     <meta name="description" content="portfolio" />
@@ -20,22 +20,45 @@
     <h1 id="score"></h1>
   </section>
 
-  <section id="single-jeopardy">
-    <article>
-      <h2>Correct!</h2>
-      <input type="button" id="add200" value="200" onclick="addScore(200)" />
-      <input type="button" id="add400" value="400" onclick="addScore(400)" />
-      <input type="button" id="add600" value="600" onclick="addScore(600)" />
-      <input type="button" id="add800" value="800" onclick="addScore(800)" />
-      <input type="button" id="add1000" value="1000" onclick="addScore(1000)" />
+  <section id="single-jeopardy" class="buttons">
+    <section class="correct">
+      <h2>Correct</h2>
+      <article>
+        <input type="button" id="add200" value="200" onclick="addScore(200)" />
+      </article>
+      <article>
+        <input type="button" id="add400" value="400" onclick="addScore(400)" />
+      </article>
+      <article>
+        <input type="button" id="add600" value="600" onclick="addScore(600)" />
+      </article>
+      <article>
+        <input type="button" id="add800" value="800" onclick="addScore(800)" />
+      </article>
+      <article>
+        <input type="button" id="add1000" value="1000" onclick="addScore(1000)" />
+      </article>
+    </section>
 
+    <section class="wrong">
       <h2>Wrong!</h2>
-      <input type="button" id="subtract200" value="200" onclick="addScore(-200)" />
-      <input type="button" id="subtract400" value="400" onclick="addScore(-400)" />
-      <input type="button" id="subtract600" value="600" onclick="addScore(-600)" />
-      <input type="button" id="subtract800" value="800" onclick="addScore(-800)" />
-      <input type="button" id="subtract1000" value="1000" onclick="addScore(-1000)" />
-    </article>
+      <article>
+        <input type="button" id="subtract200" value="200" onclick="addScore(-200)" />
+      </article>
+      <article>
+        <input type="button" id="subtract400" value="400" onclick="addScore(-400)" />
+      </article>
+      <article>
+        <input type="button" id="subtract600" value="600" onclick="addScore(-600)" />
+      </article>
+      <article>
+        <input type="button" id="subtract800" value="800" onclick="addScore(-800)" />
+      </article>
+      <article>
+        <input type="button" id="subtract1000" value="1000" onclick="addScore(-1000)" />
+      </article>
+    </section>
+
   </section>
 
   <section id="double-jeopardy">

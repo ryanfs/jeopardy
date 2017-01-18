@@ -1,5 +1,46 @@
+html {
+  width: 95%;
+  margin: 0 auto;
+  color: ivory;
+}
+
+.score {
+  border: 3px solid #666;
+  background-color: #6890ff;
+  margin-top: 2.5%;
+}
+
+section.correct {
+  background-color: green;
+  width: 45%;
+  display: inline-block;
+}
+
+section.wrong {
+  background-color: #ca3232;
+  width: 45%;
+  display: inline-block;
+}
+
+section.buttons {
+  text-align: center;
+  margin-top: 2.5%;
+}
+
+article input {
+  background-color: #6890ff;
+  width: 130px;
+  height: 45px;
+  font-size: 1.5em;
+  margin: 10px 0;
+  border: 2px solid ivory;
+  color: #fbfbb2;
+}
+
 h1 {
   font-size: 1.5em;
+  margin: 0 auto;
+  text-align: center;
 }
 
 h2 {
